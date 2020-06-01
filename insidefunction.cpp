@@ -2,24 +2,13 @@
 void Snake::display()
 {
     cout << "\n The snake board area:\n";
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < width; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < length; j++)
         {
             if (i == fruitx && j == fruity)
             {
-                if (i == posx && j == posy)
-                {
-                    cout << " 0 ";
-                    srand(time(0));
-                    fruitx = rand() % width;
-                    fruity = rand() % length;
-                    score++;
-                }
-                else
-                {
-                    cout << " F ";
-                }
+                cout << " F ";
             }
             else
             {
@@ -35,7 +24,7 @@ void Snake::display()
              << endl;
     }
 }
-void Snake::moving(char c)
+void Snake::moving(int &k, char c)
 {
     switch (c)
     {
@@ -59,5 +48,16 @@ void Snake::moving(char c)
         posx++;
         posx = (posx) % length;
         break;
+    }
+    if (posx == fruitx && posy == fruity)
+    {
+        srand(time(0));
+        fruitx = rand() % width;
+        fruity = rand() % length;
+        score += 20;
+        if (score >= 50)
+        {
+            k -= 500;
+        }
     }
 }

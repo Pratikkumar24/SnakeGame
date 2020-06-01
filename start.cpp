@@ -21,26 +21,25 @@ void Snake::input()
         case 's':
             c = 's';
             break;
-                }
+        }
     }
 }
 void Snake::StartGame()
 {
     system("clear");
-
+    int k = 199000;
     display();
     cout << "\n value of posx:" << posx << " and posy:" << posy;
     c = getch();
     while (1)
     {
         system("clear");
-        moving(c);
+        moving(k, c);
         cout << "\n value of posx:" << posx << " and posy:" << posy;
-        cout << "\n Your score:" << score;
+        cout << "\n Your score:" << score << " and speed:" << k;
         display();
-        usleep(199000);
-        // sleep(1); //Sleep for 1 second
-        thread t1([this] {
+        usleep(k);
+        thread t1([this] { //using lamba function
             this->input();
         });
         t1.detach();

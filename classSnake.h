@@ -17,7 +17,7 @@ public:
         this->posy = length / 2;
     }
     void StartGame();
-    void moving(char c);
+    void moving(int &, char c);
     void display();
     void input();
 };
