@@ -14,6 +14,7 @@ void Snake::display()
                     srand(time(0));
                     fruitx = rand() % width;
                     fruity = rand() % length;
+                    score++;
                 }
                 else
                 {

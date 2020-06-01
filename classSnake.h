@@ -4,8 +4,8 @@ class Snake
 {
     int fruitx, fruity, posx, posy;
     int width, length;
-    char area[100][100];
-    char c;
+    char area[100][100], c;
+    int score = 0;
 
 public:
     Snake(int width, int length)

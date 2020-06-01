@@ -38,7 +38,7 @@ void Snake::StartGame()
         system("clear");
         moving(c);
         cout << "\n value of posx:" << posx << " and posy:" << posy;
-
+        cout << "\n Your score:" << score;
         display();
         usleep(199000);
         // sleep(1); //Sleep for 1 second
