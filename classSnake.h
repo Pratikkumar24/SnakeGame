@@ -16,7 +16,6 @@ public:
         this->posx = width / 2;
         this->posy = length / 2;
     }
-    void Setup();
     void StartGame();
     void moving(char c);
     void display();
