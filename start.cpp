@@ -21,9 +21,7 @@ void Snake::input()
         case 's':
             c = 's';
             break;
-        default:
-            c = c;
-        }
+                }
     }
 }
 void Snake::StartGame()
